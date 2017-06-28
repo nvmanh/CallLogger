@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CallRecorder</string>
+    <string name="can_save_file">Can save file</string>
+    <string name="show_seed">Show seed</string>
+    <string name="show_phone_number">Show phone number</string>
+    <string name="in_coming_call">In coming call</string>
+    <string name="out_going_call">Out going call</string>
+    <string name="sync">Sync</string>
+    <string name="black_list">Black list</string>
+</resources>
