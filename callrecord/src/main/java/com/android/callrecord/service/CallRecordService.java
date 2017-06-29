@@ -31,15 +31,18 @@ public class CallRecordService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        super.onStartCommand(intent, flags, startId);
         Log.i(TAG, "onStartCommand()");
         startCallReceiver();
-        return START_REDELIVER_INTENT;
+        return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         stopCallReceiver();
+        Intent intent = new Intent("RestartService");
+        sendBroadcast(intent);
         Log.i(TAG, "onDestroy()");
     }
 
